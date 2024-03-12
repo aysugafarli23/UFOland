@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Slackside+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background-image: url("/media/ufo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+:root {
+    --color-blue: rgb(15, 203, 203);
+    --color-white:rgb(255, 255, 255);
+    --font-family-main: "Slackside One", cursive;
+}
+
+.container {
+    width: 1200px;
+    max-width: 95%;
+    margin: 0 auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 10px;
+}
+
+nav ul li a {
+    color: var(--color-white);
+    font-size: 30px;
+    position: relative;
+    overflow: hidden;
+    font-family: var(--font-family-main);
+    display: inline-block;
+    transform: perspective(1px) translateZ(0);
+    position: relative;
+    z-index: 1;
+}
+
+nav ul li a::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    right: 100%;
+    bottom: 0;
+    background-color: var(--color-blue);
+    width: 100%;
+    height: 4px;
+    transition-property: right;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+    box-shadow: 2px 2px 8px var(--color-white);
+    -webkit-box-shadow: 2px 2px 8px var(--color-white);
+    -moz-box-shadow: 2px 2px 8px var(--color-white);
+}
+
+nav ul li a:hover::before {
+    right: 0%;
+}
+
+.nav__main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav__icon {
+    font-size: 30px;
+    text-align: center;
+    border-radius: 50%;
+    padding: 10px;
+    margin:0px 30px;
+    width: 60px;
+    color: var(--color-blue);
+    background-color: var(--color-white);
+    border: 1px solid var(--color-white);
+    box-shadow: 2px 2px 5px var(--color-blue);
+    -webkit-box-shadow: 2px 2px 5px var(--color-blue);
+    -moz-box-shadow: 2px 2px 5px var(--color-blue);
+}
+
+.logo img {
+    width: 50px;
+    height: 70px;
+}
+
+
+/* P.S. I searched for this box-shadow function regarding to logo-size,still there's nothing( */
+.logo{
+    position: relative;
+    transition: 0.4s;
+    z-index: 1;
+}
+
+.logo::before{
+    content: "";
+    width: 50px;
+    height: 70px;
+    position: absolute;
+    top: 0%;
+    right:0%;
+    z-index: -1;
+    background-color: rgba(34, 32, 32, 0);
+    box-shadow:  12px 8px 5px var(--color-blue);
+    -webkit-box-shadow: 12px 8px 5px var(--color-blue);
+    -moz-box-shadow: 12px 8px 5px var(--color-blue);
+}
+
+.logo img:hover{
+    transform: rotateY(180deg);
+}
+
+.intro__all {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    width: 1200px;
+}
+
+.intro {
+    width: 50%;
+    margin: 100px;
+}
+
+.intro h1 {
+    color: var(--color-white);
+    font-family: var(--font-family-main);
+    font-size: 96px;
+}
+
+.intro h1:hover {
+    text-shadow: 12px 8px 5px var(--color-blue);
+    -webkit-text-shadow: 12px 8px 5px var(--color-blue);
+    -moz-text-shadow: 12px 8px 5px var(--color-blue);
+}
+
+.intro p {
+    color: var(--color-white);
+    font-size: 22px;
+    font-family: var(--font-family-main);
+    padding: 20px 0;
+}
+
+.intro .btn {
+    display: inline-block;
+    padding: 15px 55px;
+    margin: 20px 0px;
+    color: var(--color-white);
+    border-radius: 40px;
+    font-family: "Poppins", sans-serif;
+    background: rgb(5, 44, 108);
+    background: linear-gradient(90deg, rgba(5, 44, 108, 1) 0%, rgba(12, 84, 195, 1) 35%, rgba(62, 177, 244, 0.6229342078628326) 100%);
+}
+
+.intro .btn:hover {
+    filter: saturate(7);
+}
+
+.intro__cards {
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    row-gap: 50px;
+    column-gap: 30px;
+    width: 50%;
+    margin: 10px;
+    transform: translate(100px,0px);
+}
+
+.intro__card:nth-of-type(1) {
+    background: linear-gradient(61deg, rgba(28, 28, 29, 0.368) 0%, rgba(1, 1, 1, 0.264) 100%), url("https://images.unsplash.com/photo-1598482327649-e8831e1505be?q=80&w=2042&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-position: center;
+    background-size: cover;
+}
+
+.intro__card:nth-of-type(2) {
+    background: linear-gradient(61deg, rgba(28, 28, 29, 0.368) 0%, rgba(1, 1, 1, 0.264) 100%), url("https://images.unsplash.com/photo-1582236829590-f8cb7de75229?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-position: center;
+    background-size: cover;
+}
+
+.intro__card:nth-of-type(3) {
+    background: linear-gradient(61deg, rgba(28, 28, 29, 0.368) 0%, rgba(1, 1, 1, 0.264) 100%), url("https://images.unsplash.com/photo-1607335614551-3062bf90f30e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-position: center;
+    background-size: cover;
+}
+
+.intro__card:nth-of-type(4) {
+    background: linear-gradient(61deg, rgba(28, 28, 29, 0.368) 0%, rgba(1, 1, 1, 0.264) 100%), url("https://images.unsplash.com/photo-1607335614785-e1436e859ebf?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-position: center;
+    background-size: cover;
+}
+
+.intro__card {
+    color: var(--color-white);
+    width: 40%;
+    height: 240px;
+    transition: 0.4s;
+    border: 2px solid var(--color-white);
+    border-radius: 15%;
+    background-repeat: no-repeat;
+    box-shadow: 2px 2px 5px var(--color-white);
+    -webkit-box-shadow: 2px 2px 5px var(--color-white);
+    -moz-box-shadow: 2px 2px 5px var(--color-white);
+}
+
+.intro__card:hover {
+    transform: translateY(-30px);
+    box-shadow: 2px 2px 5px var(--color-blue);
+    -webkit-box-shadow: 2px 2px 5px var(--color-blue);
+    -moz-box-shadow: 2px 2px 5px var(--color-blue);
+}
+
+.intro__card__text {
+    transform: translateY(120px);
+    padding: 8px;
+}
+
+.intro__card__text h4 {
+    font-family: var(--font-family-main);
+}
+
+.intro__card__text p {
+    font-size: 13px;
+    font-family: "Poppins", sans-serif;
+    
+}
